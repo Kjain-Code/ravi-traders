@@ -8,7 +8,7 @@ const TABS = [
   { id: "qr", label: "🔳 Scan QR" },
   { id: "upi", label: "📱 UPI ID" },
   { id: "netbanking", label: "🏦 Netbanking" },
-  { id: "card", label: "💳 Card" },
+  // { id: "card", label: "💳 Card" },
 ];
 
 export default function Payment() {
@@ -87,43 +87,45 @@ export default function Payment() {
             )}
 
             {tab === "netbanking" && (
-              <div className="method-pane active">
-                <p style={{ fontSize: 13.5 }}>
-                  Netbanking se direct transfer ke liye humse bank account
-                  details WhatsApp par confirm kar lein.
-                </p>
-                <a
-                  href={whatsappAmountLink(amt)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-whatsapp btn-sm"
-                >
-                  💬 Netbanking Details Maangein
-                </a>
-              </div>
-            )}
+  <div className="method-pane active">
+    <p style={{ fontSize: 13.5 }}>
+      Neeche di gayi bank details se netbanking / IMPS / NEFT ke
+      through direct transfer kar sakte hain:
+    </p>
+    <div className="upi-row">
+      <label>Account Holder Name</label>
+      <input value="Ravi Traders" readOnly onClick={(e) => e.target.select()} />
+    </div>
+    <div className="upi-row">
+      <label>Account Number</label>
+      <input value="043605006931" readOnly onClick={(e) => e.target.select()} />
+    </div>
+    <div className="upi-row">
+      <label>IFSC Code</label>
+      <input value="ICIC0000436" readOnly onClick={(e) => e.target.select()} />
+    </div>
+    <div className="upi-row">
+      <label>Bank & Branch</label>
+      <input value="ICICI Bank, Muzaffarnagar Branch" readOnly onClick={(e) => e.target.select()} />
+    </div>
+    <p style={{ fontSize: 12, color: "#7A8094" }}>
+      Transfer karne ke baad payment screenshot WhatsApp par bhej dein,
+      hum turant confirm kar denge.
+    </p>
+    <a
+      href={whatsappAmountLink(amt)}
+      target="_blank"
+      rel="noreferrer"
+      className="btn btn-whatsapp btn-sm"
+      style={{ marginTop: 8 }}
+    >
+      💬 Payment Screenshot Bhejein
+    </a>
+  </div>
+)}
 
-            {tab === "card" && (
-              <div className="method-pane active">
-                <p style={{ fontSize: 13.5 }}>
-                  Card payment link generate karwane ke liye WhatsApp par
-                  amount confirm karein, hum turant secure payment link
-                  bhej denge.
-                </p>
-                <a
-                  href={whatsappAmountLink(amt)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-whatsapp btn-sm"
-                >
-                  💬 Card Payment Link Maangein
-                </a>
-              </div>
-            )}
-
-            <div className="secure-note">
-              🔒 Seedha Ravi Traders ke business UPI account mein payment jaata hai
-            </div>
+            
+            
           </Reveal>
 
           <Reveal delay={0.1} className="pay-card">
