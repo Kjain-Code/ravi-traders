@@ -97,9 +97,12 @@ export default function Services() {
             </Reveal>
             <Reveal delay={0.1}>
               <img
-                src="/images/asian-paints-banner.png"
-                alt="Asian Paints painting service"
-                style={{ borderRadius: 24, boxShadow: "var(--shadow-lg)" }}
+                src="/images/beautiful-homes-painting-service.png"
+                alt="Asian Paints Beautiful Homes Painting Service"
+                style={{
+                  borderRadius: 24, boxShadow: "var(--shadow-lg)",
+                  background: "#fff", padding: "36px 28px",
+                }}
               />
             </Reveal>
           </div>

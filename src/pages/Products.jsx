@@ -23,15 +23,21 @@ export default function Products() {
 
   const list = filter === "all" ? products : products.filter((p) => p.category === filter);
 
+  const counts = products.reduce((acc, p) => {
+    acc[p.category] = (acc[p.category] || 0) + 1;
+    return acc;
+  }, {});
+
   return (
     <>
-      <PageHead eyebrow="● Full Catalogue" title="Paints, Primers, Tints, Waterproofing & Tools" crumb="Products" />
+      <PageHead eyebrow="● Full Catalogue" title="Paints, Primer, Waterproofing Solutions, All Types of Wood Finishes and Tools" crumb="Products" />
 
       <section className="section" style={{ paddingTop: 20 }}>
         <div className="container">
           <div className="filter-row">
             <button className={`filter-chip ${filter === "all" ? "active" : ""}`} onClick={() => setFilter("all")}>
               All
+              {products.length > 0 && <span className="chip-count">{products.length}</span>}
             </button>
             {CATEGORIES.map((c) => (
               <button
@@ -39,7 +45,9 @@ export default function Products() {
                 className={`filter-chip ${filter === c.id ? "active" : ""}`}
                 onClick={() => setFilter(c.id)}
               >
-                {c.icon} {c.label}
+                <img src={encodeURI(c.image)} alt="" className="chip-icon" />
+                {c.label}
+                {counts[c.id] > 0 && <span className="chip-count">{counts[c.id]}</span>}
               </button>
             ))}
           </div>

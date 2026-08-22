@@ -8,7 +8,7 @@ const INFO = [
   { ico: "📍", title: "Store Address", text: "Ankit Vihar, 56, Gali No. 1, Kaji Kalesar, Pachenga Road, Lal Bagh, Gandhi Colony, Muzaffarnagar, Uttar Pradesh 251002" },
   { ico: "📞", title: "Phone / WhatsApp", text: "099977 77047" },
   { ico: "🕒", title: "Store Hours", text: "Monday – Saturday: 9:00 AM – 8:30 PM\nSunday: 10:00 AM – 2:00 PM" },
-  { ico: "⭐", title: "Google Rating", text: "4.9★ from 25+ reviews — Paint store in Uttar Pradesh" },
+  { ico: "⭐", title: "Google Rating", text: "4.9★ from 100+ reviews — Paint store in Uttar Pradesh" },
 ];
 
 export default function Contact() {
@@ -37,7 +37,7 @@ export default function Contact() {
             <h2>Hamare Baare Mein</h2>
             <p>
               Ravi Traders Muzaffarnagar mein sthapit ek bharosemand Asian
-              Paints authorised dealer hai. 10+ saalon se hum interior aur
+              Paints authorised dealer hai. 25+ saalon se hum interior aur
               exterior painting ke liye genuine paints, primers,
               computerised tints aur professional tools provide kar rahe
               hain — chahe aap ghar ke liye chhota order karein ya

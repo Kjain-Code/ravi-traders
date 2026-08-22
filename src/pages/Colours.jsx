@@ -9,6 +9,8 @@ const COLOUR_FAMILIES = [
   { name: "Green Family", shades: ["#DCEFD2", "#A9D68C", "#79B857", "#4F8C3A", "#356024", "#213D17"] },
   { name: "Pink & Purple Family", shades: ["#F2D6E8", "#E3A6CE", "#C46FA8", "#9A4C87", "#6E3566", "#472244"] },
   { name: "Neutral & Beige Family", shades: ["#F7F3EC", "#EDE3D2", "#DCC9A8", "#C4A876", "#9A7C4C", "#6B5236"] },
+  { name: "Grey Family", shades: ["#F2F2F0", "#DCDCD8", "#C0C0BA", "#96968E", "#686860", "#3A3A36"] },
+  { name: "White & Off-White Family", shades: ["#FFFFFF", "#FBF9F4", "#F5F0E4", "#ECE4D2", "#DFD3B8", "#CBBB94"] },
 ];
 
 export default function Colours() {

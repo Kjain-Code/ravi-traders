@@ -27,8 +27,9 @@ export default function Footer() {
           <div>
             <h4>Categories</h4>
             <Link to="/products#paints">Wall Paints</Link>
+            <Link to="/products#apcolite">Apcolite</Link>
             <Link to="/products#primers">Primers</Link>
-            <Link to="/products#tints">Tints</Link>
+            <Link to="/products#exterior">Exterior</Link>
             <Link to="/products#tools">Brushes &amp; Tools</Link>
             <Link to="/products#waterproofing">Waterproofing</Link>
             <Link to="/products#putty">Putty &amp; Wall Care</Link>

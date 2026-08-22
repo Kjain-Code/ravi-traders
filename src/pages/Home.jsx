@@ -121,14 +121,14 @@ export default function Home() {
             <div className="hero-stats">
               <div className="hero-stat">
                 <b>4.9★</b>
-                <span>25 Google Reviews</span>
+                <span>100+ Google Reviews</span>
               </div>
               <div className="hero-stat">
-                <b>500+</b>
+                <b>10k+</b>
                 <span>Happy Customers</span>
               </div>
               <div className="hero-stat">
-                <b>10+ Yrs</b>
+                <b>25+ Yrs</b>
                 <span>Trusted in Muzaffarnagar</span>
               </div>
             </div>
@@ -184,7 +184,9 @@ export default function Home() {
                   className="cat-card"
                   style={{ "--tint": c.color, display: "block" }}
                 >
-                  <span className="cat-icon">{c.icon}</span>
+                  <span className="cat-icon">
+                    <img src={encodeURI(c.image)} alt={c.label} loading="lazy" />
+                  </span>
                   <h3>{c.label}</h3>
                   <p>{c.blurb}</p>
                   <span className="cat-link">
@@ -229,7 +231,7 @@ export default function Home() {
         <div className="container">
           <Reveal className="section-head center">
             <span className="eyebrow">Customer Kehte Hain</span>
-            <h2>25+ Google reviews, 4.9★ rating</h2>
+            <h2>100+ Google reviews, 4.9★ rating</h2>
           </Reveal>
           <div className="test-grid">
             {TESTIMONIALS.map((t, i) => (

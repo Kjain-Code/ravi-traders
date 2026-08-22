@@ -87,45 +87,42 @@ export default function Payment() {
             )}
 
             {tab === "netbanking" && (
-  <div className="method-pane active">
-    <p style={{ fontSize: 13.5 }}>
-      Neeche di gayi bank details se netbanking / IMPS / NEFT ke
-      through direct transfer kar sakte hain:
-    </p>
-    <div className="upi-row">
-      <label>Account Holder Name</label>
-      <input value="Ravi Traders" readOnly onClick={(e) => e.target.select()} />
-    </div>
-    <div className="upi-row">
-      <label>Account Number</label>
-      <input value="043605006931" readOnly onClick={(e) => e.target.select()} />
-    </div>
-    <div className="upi-row">
-      <label>IFSC Code</label>
-      <input value="ICIC0000436" readOnly onClick={(e) => e.target.select()} />
-    </div>
-    <div className="upi-row">
-      <label>Bank & Branch</label>
-      <input value="ICICI Bank, Muzaffarnagar Branch" readOnly onClick={(e) => e.target.select()} />
-    </div>
-    <p style={{ fontSize: 12, color: "#7A8094" }}>
-      Transfer karne ke baad payment screenshot WhatsApp par bhej dein,
-      hum turant confirm kar denge.
-    </p>
-    <a
-      href={whatsappAmountLink(amt)}
-      target="_blank"
-      rel="noreferrer"
-      className="btn btn-whatsapp btn-sm"
-      style={{ marginTop: 8 }}
-    >
-      💬 Payment Screenshot Bhejein
-    </a>
-  </div>
-)}
-
-            
-            
+              <div className="method-pane active">
+                <p style={{ fontSize: 13.5 }}>
+                  Neeche di gayi bank details se netbanking / IMPS / NEFT ke
+                  through direct transfer kar sakte hain:
+                </p>
+                <div className="upi-row">
+                  <label>Account Holder Name</label>
+                  <input value="Ravi Traders" readOnly onClick={(e) => e.target.select()} />
+                </div>
+                <div className="upi-row">
+                  <label>Account Number</label>
+                  <input value="043605006931" readOnly onClick={(e) => e.target.select()} />
+                </div>
+                <div className="upi-row">
+                  <label>IFSC Code</label>
+                  <input value="ICIC0000436" readOnly onClick={(e) => e.target.select()} />
+                </div>
+                <div className="upi-row">
+                  <label>Bank & Branch</label>
+                  <input value="ICICI Bank, Muzaffarnagar Branch" readOnly onClick={(e) => e.target.select()} />
+                </div>
+                <p style={{ fontSize: 12, color: "#7A8094" }}>
+                  Transfer karne ke baad payment screenshot WhatsApp par bhej dein,
+                  hum turant confirm kar denge.
+                </p>
+                <a
+                  href={whatsappAmountLink(amt)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-whatsapp btn-sm"
+                  style={{ marginTop: 8 }}
+                >
+                  💬 Payment Screenshot Bhejein
+                </a>
+              </div>
+            )}
           </Reveal>
 
           <Reveal delay={0.1} className="pay-card">

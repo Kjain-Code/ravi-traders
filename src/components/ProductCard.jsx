@@ -12,7 +12,6 @@ function formatPrice(p) {
 }
 
 export default function ProductCard({ p, index = 0 }) {
-  const folder = p.image ? p.image.split("/").slice(0, -1).join("/") : "";
   return (
     <motion.div
       className="product-card"
@@ -26,11 +25,7 @@ export default function ProductCard({ p, index = 0 }) {
         style={{ background: `linear-gradient(160deg, ${p.color}22, ${p.color}05)` }}
       >
         {p.tag && <span className="product-tag">{p.tag}</span>}
-        <img src={p.image} alt={p.name} loading="lazy" />
-        <div className="img-swap-hint">
-          <b>📷 Real photo yahan daalein</b>
-          <span>{folder}/</span>
-        </div>
+        <img src={encodeURI(p.image)} alt={p.name} loading="lazy" />
       </div>
       <div className="product-body">
         <span className="cat">{categoryLabel(p.category)}</span>

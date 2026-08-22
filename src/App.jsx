@@ -11,6 +11,7 @@ import Services from "./pages/Services.jsx";
 import Colours from "./pages/Colours.jsx";
 import Payment from "./pages/Payment.jsx";
 import Contact from "./pages/Contact.jsx";
+import Waterproofing from "./pages/Waterproofing.jsx";
 
 function PageWrap({ children }) {
   return (
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="/" element={<PageWrap><Home /></PageWrap>} />
           <Route path="/products" element={<PageWrap><Products /></PageWrap>} />
           <Route path="/services" element={<PageWrap><Services /></PageWrap>} />
+          <Route path="/waterproofing" element={<PageWrap><Waterproofing /></PageWrap>} />
           <Route path="/colours" element={<PageWrap><Colours /></PageWrap>} />
           <Route path="/payment" element={<PageWrap><Payment /></PageWrap>} />
           <Route path="/contact" element={<PageWrap><Contact /></PageWrap>} />
