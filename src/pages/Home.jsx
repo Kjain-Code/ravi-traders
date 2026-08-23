@@ -104,10 +104,10 @@ export default function Home() {
             </h1>
             <BrushDivider />
             <p style={{ maxWidth: 480 }}>
-              Ravi Traders par milta hai Asian Paints ka poora range — Royale
-              se le kar exterior emulsions, primers, tints, waterproofing
-              aur professional brushes tak. Quality paint, sahi salaah, aur
-              ghar jaisi service.
+              Ravi Traders par milta hai Asian Paints ka poora range —
+              Paints, Primer, Waterproofing Solutions, All Types of Wood
+              Finishes and Tools. Quality paint, sahi salaah, aur ghar jaisi
+              service.
             </p>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 26 }}>
               <Link to="/products" className="btn btn-primary">
@@ -158,7 +158,7 @@ export default function Home() {
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 4, repeat: Infinity, delay: 1 }}
             >
-              🎨 2,000+ Shades Matched
+              🎨 10,000+ Shades Matched
             </motion.div>
           </motion.div>
         </div>

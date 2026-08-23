@@ -276,7 +276,7 @@ header.site{ position:sticky; top:0; z-index:40; background:rgba(251,249,246,0.8
   width:64px; height:64px; border-radius:16px; margin-bottom:18px;
   background:linear-gradient(135deg, color-mix(in srgb, var(--tint,#E4572E) 16%, white), color-mix(in srgb, var(--tint,#E4572E) 6%, white));
 }
-.cat-icon img{ width:100%; height:100%; object-fit:cover; }
+.cat-icon img{ width:100%; height:100%; object-fit:contain; padding:9px; box-sizing:border-box; }
 .cat-card h3{ font-size:19px; margin-bottom:8px; }
 .cat-card p{ font-size:13.5px; margin-bottom:20px; }
 .cat-link{ font-weight:700; font-size:13.5px; color:var(--ink); display:inline-flex; align-items:center; gap:6px; }
@@ -304,7 +304,7 @@ header.site{ position:sticky; top:0; z-index:40; background:rgba(251,249,246,0.8
   transition:all .2s ease; display:inline-flex; align-items:center; gap:8px;
 }
 .filter-chip.active, .filter-chip:hover{ background:var(--ink); color:#fff; border-color:var(--ink); }
-.chip-icon{ width:24px; height:24px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+.chip-icon{ width:24px; height:24px; border-radius:50%; object-fit:contain; flex-shrink:0; background:#fff; padding:2px; box-sizing:border-box; border:1px solid var(--line); }
 .chip-count{
   font-size:11px; font-weight:700; color:#7A8094; background:rgba(31,36,48,0.07);
   padding:1px 7px; border-radius:100px; margin-left:2px; transition:all .2s ease;
