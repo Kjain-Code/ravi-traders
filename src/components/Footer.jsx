@@ -12,7 +12,7 @@ export default function Footer() {
               Ankit Vihar, 56, Gali No. 1, Kaji Kalesar, Pachenga Road, Lal
               Bagh, Gandhi Colony, Muzaffarnagar, Uttar Pradesh 251002
             </p>
-            <p>📞 099977 77047</p>
+            <p>📞 099977 77047 / 074510 07047</p>
           </div>
           <div>
             <h4>Quick Links</h4>
@@ -21,6 +21,7 @@ export default function Footer() {
             <Link to="/services">Painting Service</Link>
             <Link to="/waterproofing">Waterproofing</Link>
             <Link to="/colours">Colours</Link>
+            <Link to="/textures">Textures</Link>
             <Link to="/payment">Payment</Link>
             <Link to="/contact">Contact</Link>
           </div>
@@ -41,6 +42,7 @@ export default function Footer() {
               💬 Message on WhatsApp
             </a>
             <a href="tel:+919997777047">📞 Call Now</a>
+            <a href="tel:+917451007047">📞 074510 07047</a>
           </div>
         </div>
         <div className="footer-bottom">

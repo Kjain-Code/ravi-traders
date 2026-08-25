@@ -6,7 +6,7 @@ import { whatsappContactLink, whatsappGeneralLink } from "../whatsapp.js";
 
 const INFO = [
   { ico: "📍", title: "Store Address", text: "Ankit Vihar, 56, Gali No. 1, Kaji Kalesar, Pachenga Road, Lal Bagh, Gandhi Colony, Muzaffarnagar, Uttar Pradesh 251002" },
-  { ico: "📞", title: "Phone / WhatsApp", text: "099977 77047" },
+  { ico: "📞", title: "Phone / WhatsApp", text: "099977 77047 / 074510 07047" },
   { ico: "🕒", title: "Store Hours", text: "Monday – Saturday: 9:00 AM – 8:30 PM\nSunday: 10:00 AM – 2:00 PM" },
   { ico: "⭐", title: "Google Rating", text: "4.9★ from 100+ reviews — Paint store in Uttar Pradesh" },
 ];
@@ -86,8 +86,9 @@ export default function Contact() {
             </form>
 
             <p style={{ marginTop: 22, fontSize: 13.5 }}>Ya seedha connect karein</p>
-            <div style={{ display: "flex", gap: 12 }}>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <a href="tel:+919997777047" className="btn btn-outline btn-sm">📞 Call Now</a>
+              <a href="tel:+917451007047" className="btn btn-outline btn-sm">📞 074510 07047</a>
               <a href={whatsappGeneralLink()} target="_blank" rel="noreferrer" className="btn btn-whatsapp btn-sm">
                 💬 WhatsApp
               </a>

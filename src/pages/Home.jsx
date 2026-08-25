@@ -202,6 +202,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- TEXTURES PROMO ---------- */}
+      <section className="container" style={{ marginBottom: 76 }}>
+        <Reveal
+          className="cta-band"
+          style={{ background: "radial-gradient(120% 140% at 85% 20%, #3a2f52 0%, var(--ink) 55%, #171a24 100%)" }}
+        >
+          <div>
+            <h2>Deewar par 3D texture chahiye?</h2>
+            <p>
+              Royale Play, stone, marble, concrete aur bahut kuch — Asian
+              Paints ki hazaro texture designs ki curated gallery dekhein.
+            </p>
+          </div>
+          <Link to="/textures" className="btn btn-primary">
+            Textures Dekhein →
+          </Link>
+        </Reveal>
+      </section>
+
       {/* ---------- FEATURES ---------- */}
       <section className="section section-alt">
         <div className="container">

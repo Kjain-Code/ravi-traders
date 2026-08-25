@@ -7,6 +7,7 @@ const LINKS = [
   { to: "/products", label: "Products" },
   { to: "/services", label: "Painting Service" },
   { to: "/colours", label: "Colours" },
+  { to: "/textures", label: "Textures" },
   { to: "/payment", label: "Payment" },
   { to: "/contact", label: "Contact / About" },
 ];
@@ -19,7 +20,11 @@ export default function Navbar() {
       <div className="topbar">
         <div className="container">
           <span>🎨 Asian Paints Authorised Dealer • Muzaffarnagar</span>
-          <a href={`tel:+${STORE_WHATSAPP_NUMBER}`}>📞 099977 77047</a>
+          <span className="topbar-phones">
+            <a href={`tel:+${STORE_WHATSAPP_NUMBER}`}>📞 099977 77047</a>
+            <span aria-hidden="true">/</span>
+            <a href="tel:+917451007047">074510 07047</a>
+          </span>
         </div>
       </div>
 
