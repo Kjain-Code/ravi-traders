@@ -25,13 +25,21 @@ function TextureCard({ t }) {
       className="texture-card"
       style={{ "--tint": t.tint }}
     >
-      {t.tag && <span className="tag">{t.tag}</span>}
-      <span className="ico">{t.ico}</span>
-      <h4>{t.title}</h4>
-      <p>{t.text}</p>
-      <span className="texture-link">
-        Designs Dekhein <ArrowIcon />
-      </span>
+      <div className="texture-media">
+        {t.image ? (
+          <img src={encodeURI(t.image)} alt={t.title} loading="lazy" />
+        ) : (
+          <span className="texture-media-ico">{t.ico}</span>
+        )}
+        {t.tag && <span className="texture-tag">{t.tag}</span>}
+      </div>
+      <div className="texture-body">
+        <h4>{t.title}</h4>
+        <p>{t.text}</p>
+        <span className="texture-link">
+          Designs Dekhein <ArrowIcon />
+        </span>
+      </div>
     </a>
   );
 }
@@ -93,6 +101,7 @@ const MORE = [
     tag: "Collection",
     title: "Royale Play Range",
     text: "Poori Royale Play product line — Calcecruda, Dune, Stucco, Metallics aur bahut kuch.",
+    image: "/images/textures/royale-play-range.png",
     href: "https://www.asianpaints.com/paint-products/interior-wall-paints/royale-play.html",
   },
   {
@@ -101,6 +110,7 @@ const MORE = [
     tag: "Design Preview",
     title: "Calcecruda Roman Mandala",
     text: "Ek design kaisa dikhta hai, yahan se andaza lagayein — colours, sample order aur lagane ka tarika, sab ek hi jagah.",
+    image: "/images/textures/calcecruda-roman-mandala.png",
     href: "https://www.asianpaints.com/interior-textures/calcecruda-roman-mandala-idc1009cmb1003.html",
   },
   {
@@ -109,6 +119,7 @@ const MORE = [
     tag: "Inspiration",
     title: "Pinterest — Texture Ideas",
     text: "Real ghar walls ke inspiration boards — apni pasand save karein aur humein bhejein.",
+    image: "/images/textures/pinterest-texture-ideas.png",
     href: "https://in.pinterest.com/ideas/asian-paints-wall-texture-design/930510192245/",
   },
 ];
@@ -124,18 +135,30 @@ export default function Textures() {
 
       <section className="section" style={{ paddingTop: 10 }}>
         <div className="container">
-          <Reveal className="section-head">
-            <span className="eyebrow">1000+ Texture Designs</span>
-            <h2>Deewar ko dena hai ek naya, stylish look?</h2>
-            <p>
-              Marble, stone, concrete, 3D aur metallic — Asian Paints ke paas
-              har style ke liye ek texture design maujood hai. Neeche di gayi
-              official Asian Paints aur Pinterest gallery se apni pasand ka
-              design browse karein. Jo bhi design mann ko bhaye, uska naam ya
-              screenshot seedha WhatsApp par bhej dein — hum sample dikhayenge,
-              sahi rate batayenge aur ghar par laga bhi denge.
-            </p>
-          </Reveal>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 44, alignItems: "center", marginBottom: 60 }}>
+            <Reveal>
+              <span className="eyebrow">1000+ Texture Designs</span>
+              <h2>Deewar ko dena hai ek naya, stylish look?</h2>
+              <p>
+                Marble, stone, concrete, 3D aur metallic — Asian Paints ke paas
+                har style ke liye ek texture design maujood hai. Neeche di gayi
+                official Asian Paints aur Pinterest gallery se apni pasand ka
+                design browse karein. Jo bhi design mann ko bhaye, uska naam ya
+                screenshot seedha WhatsApp par bhej dein — hum sample dikhayenge,
+                sahi rate batayenge aur ghar par laga bhi denge.
+              </p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <img
+                src="/images/textures/calcecruda-roman-mandala.png"
+                alt="Asian Paints wall texture example — Calcecruda Roman Mandala finish"
+                style={{
+                  width: "100%", borderRadius: 24, boxShadow: "var(--shadow-lg)",
+                  aspectRatio: "6/5", objectFit: "cover",
+                }}
+              />
+            </Reveal>
+          </div>
 
           <Reveal className="section-head" style={{ marginBottom: 28 }}>
             <span className="eyebrow">Shuru Karein Yahan Se</span>
