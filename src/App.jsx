@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import WhatsAppFloat from "./components/WhatsAppFloat.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import PageMeta from "./components/PageMeta.jsx";
 
 import Home from "./pages/Home.jsx";
 import Products from "./pages/Products.jsx";
@@ -13,6 +14,7 @@ import Payment from "./pages/Payment.jsx";
 import Contact from "./pages/Contact.jsx";
 import Waterproofing from "./pages/Waterproofing.jsx";
 import Textures from "./pages/Textures.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function PageWrap({ children }) {
   return (
@@ -33,6 +35,7 @@ export default function App() {
   return (
     <>
     <ScrollToTop />
+      <PageMeta />
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
@@ -44,6 +47,7 @@ export default function App() {
           <Route path="/textures" element={<PageWrap><Textures /></PageWrap>} />
           <Route path="/payment" element={<PageWrap><Payment /></PageWrap>} />
           <Route path="/contact" element={<PageWrap><Contact /></PageWrap>} />
+          <Route path="*" element={<PageWrap><NotFound /></PageWrap>} />
         </Routes>
       </AnimatePresence>
       <Footer />

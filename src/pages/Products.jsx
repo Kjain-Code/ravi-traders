@@ -18,7 +18,12 @@ export default function Products() {
 
   useEffect(() => {
     const hash = location.hash.replace("#", "");
-    if (hash) setFilter(hash);
+    if (hash) {
+      setFilter(hash);
+      // footer category links keep the same page, so bring the product list into view
+      const row = document.querySelector(".filter-row");
+      if (row) window.scrollTo({ top: row.getBoundingClientRect().top + window.scrollY - 110, behavior: "smooth" });
+    }
   }, [location.hash]);
 
   const list = filter === "all" ? products : products.filter((p) => p.category === filter);

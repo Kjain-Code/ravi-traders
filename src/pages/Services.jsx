@@ -65,7 +65,7 @@ export default function Services() {
       {/* ---------- Intro ---------- */}
       <section className="section" style={{ paddingTop: 10 }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 44, alignItems: "center" }}>
+          <div className="split-2">
             <Reveal>
               <span className="eyebrow">Painting services with tailored colour guidance</span>
               <h2>Trained painters, dedicated supervision</h2>
@@ -158,7 +158,7 @@ export default function Services() {
             <span className="eyebrow">Kaam Kaise Hota Hai</span>
             <h2>6 simple steps mein poora painting project</h2>
           </Reveal>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="grid-3">
             {PROCESS.map((p, i) => (
               <Reveal key={p.step} delay={i * 0.05}>
                 <div className="feat">
@@ -189,7 +189,7 @@ export default function Services() {
             <h2>Apni jarurat ke hisaab se plan chunein</h2>
             <p>Har plan ke saath colour consultation aur genuine product ka assurance milta hai.</p>
           </Reveal>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="grid-3">
             {PLANS.map((plan, i) => (
               <Reveal key={plan.name} delay={i * 0.06}>
                 <div

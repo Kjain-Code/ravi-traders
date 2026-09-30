@@ -496,3 +496,22 @@ footer a:hover{ color:var(--gold); }
 /* ---------- misc ---------- */
 .dealer-banner{ width:100%; max-width:420px; border-radius:16px; box-shadow:var(--shadow); margin:14px 0 18px; }
 .page-loader{ position:fixed; inset:0; background:var(--canvas); z-index:200; display:flex; align-items:center; justify-content:center; }
+/* ---------- Fixes: responsive layout + mobile menu ---------- */
+html{ overflow-x:clip; }
+.split-2{ display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; }
+.grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+@media (max-width:900px){
+  .split-2{ grid-template-columns:1fr; gap:28px; }
+  .grid-3{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:560px){ .grid-3{ grid-template-columns:1fr; } }
+@media (max-width:960px){
+  .nav-links{ z-index:50; visibility:hidden; transition:right .35s ease, visibility .35s; }
+  .nav-links.open{ visibility:visible; }
+  .nav-cta{ position:relative; z-index:60; }
+  .hamburger{ cursor:pointer; line-height:1; padding:6px; color:var(--ink); }
+}
+.nav-backdrop{ position:fixed; inset:0; background:rgba(20,22,30,.35); z-index:35; }
+.pay-wrap > *, .split-2 > *, .grid-3 > *, .feat-grid > *{ min-width:0; }
+.pay-amount input{ min-width:0; }
+@media (max-width:480px){ .pay-card{ padding:22px 18px; } }

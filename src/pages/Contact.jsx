@@ -22,9 +22,9 @@ export default function Contact() {
   async function handleSubmit(e) {
     e.preventDefault();
     setSending(true);
-    await sendContact(form); // saved to MongoDB if backend is running
+    // Open WhatsApp immediately (inside the click) so mobile browsers don't block the popup
     window.open(whatsappContactLink(form), "_blank");
-    setSending(false);
+    sendContact(form).finally(() => setSending(false)); // saved to MongoDB if backend is running
   }
 
   return (

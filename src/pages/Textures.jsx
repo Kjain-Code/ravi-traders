@@ -135,7 +135,7 @@ export default function Textures() {
 
       <section className="section" style={{ paddingTop: 10 }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 44, alignItems: "center", marginBottom: 60 }}>
+          <div className="split-2" style={{ marginBottom: 60 }}>
             <Reveal>
               <span className="eyebrow">1000+ Texture Designs</span>
               <h2>Deewar ko dena hai ek naya, stylish look?</h2>

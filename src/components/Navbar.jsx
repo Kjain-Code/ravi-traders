@@ -63,14 +63,16 @@ export default function Navbar() {
             </Link>
             <button
               className="hamburger"
-              aria-label="Menu"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
               onClick={() => setOpen((o) => !o)}
             >
-              ☰
+              {open ? "✕" : "☰"}
             </button>
           </div>
         </nav>
       </header>
+      {open && <div className="nav-backdrop" onClick={() => setOpen(false)} />}
     </>
   );
 }
